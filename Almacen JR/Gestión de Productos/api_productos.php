@@ -1,8 +1,6 @@
 <?php
-// Usamos tu archivo de conexión
 include '../conexion.php'; 
 
-// Establecemos que la respuesta será en formato JSON
 header('Content-Type: application/json');
 
 // Obtenemos la acción a realizar

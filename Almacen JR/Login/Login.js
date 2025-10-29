@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageDisplay = document.getElementById('messageDisplay');
 
     
-    const LOGIN_API_URL = '../Login.php'; 
+    const LOGIN_API_URL = 'Login.php'; 
 
     function displayMessage(message, type) {
         messageDisplay.textContent = message;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayMessage(`✅ ¡Acceso Autorizado! Hola, ${data.userDisplayName}. Redirigiendo...`, 'success');
 
                 setTimeout(() => { 
-                    window.location.href = '../Gestion de usuarios/Usuarios.html'; 
+                    window.location.href = '../Gestión de usuarios/Usuarios.html'; 
                 }, 1000);
 
             } else { // Códigos de error (400, 401, 500)

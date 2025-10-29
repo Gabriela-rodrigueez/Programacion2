@@ -1,4 +1,3 @@
-// Espera a que todo el contenido del HTML esté cargado
 document.addEventListener('DOMContentLoaded', () => {
 
     const formNuevoProducto = document.getElementById('form-nuevo-producto');
@@ -8,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
    
     async function cargarCategoriasEnSelect() {
         try {
-            const respuesta = await fetch('api.php?accion=listar_categorias');
+            const respuesta = await fetch('api_productos.php?accion=listar_categorias');
             const datos = await respuesta.json();
 
             if (datos.success) {
-                selectCategoria.innerHTML = '<option value="" disabled selected>Seleccione una categoría</option>'; // Opción por defecto
+                selectCategoria.innerHTML = '<option value="" disabled selected>Seleccione una categoría</option>'; 
                 datos.data.forEach(categoria => {
                     selectCategoria.innerHTML += `
                         <option value="${categoria.id_Categoria}">${categoria.Nombre}</option>
@@ -28,13 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function cargarProductos() {
         try {
-            const respuesta = await fetch('api.php?accion=listar_productos');
+            const respuesta = await fetch('api_productos.php?accion=listar_productos');
             const datos = await respuesta.json();
 
             if (datos.success) {
-                tablaProductosBody.innerHTML = ''; // Limpiamos la tabla
+                tablaProductosBody.innerHTML = ''; 
                 datos.data.forEach(producto => {
-                    // Simulamos una URL de imagen
                     const imgUrl = `http://googleusercontent.com/profile/picture/${producto.id_Producto}`;
 
                     tablaProductosBody.innerHTML += `
@@ -80,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const datosProducto = Object.fromEntries(formData.entries());
 
         try {
-            const respuesta = await fetch('api.php?accion=agregar_producto', {
+            const respuesta = await fetch('api_productos.php?accion=agregar_producto', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
