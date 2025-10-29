@@ -4,17 +4,18 @@ $servidor = "localhost";
 $usuario = "root";
 $password = "root";
 $base_de_datos = "almacenjr_db";
+$charset = "utf8"; 
+
+try {
+    $dsn = "mysql:host=$servidor;dbname=$base_de_datos;charset=$charset";
 
 
-$conexion = new mysqli($servidor, $usuario, $password, $base_de_datos);
+    $pdo = new PDO($dsn, $usuario, $password);
 
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if ($conexion->connect_error) {
-    // die() detiene la ejecución del script y muestra un mensaje
-    die("Conexión fallida: " . $conexion->connect_error);
+} catch (PDOException $e) {
+    die("Conexión fallida (PDO): " . $e->getMessage());
 }
-
-// Opcional: Establecer el juego de caracteres a UTF-8 para evitar problemas con tildes y eñes
-$conexion->set_charset("utf8");
 
 ?>

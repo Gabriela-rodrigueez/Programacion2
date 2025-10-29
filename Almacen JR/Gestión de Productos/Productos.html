@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Login/Login.html">
+    <link rel="stylesheet" href="../Gestión de usuarios/Usuarios.html">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#111418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">StockPilot</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Panel</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Inventario</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Pedidos</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Clientes</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Informes</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#111418]" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5QstzTJbnr82wiU258xhuir4yT533DQ1RZsHqe_sTmmwHoSBLEBwN8MlQr_wn_2otfUS90DobOS2ok3DQL1q5jyeV-JYj-THyByIne8mKZp2AWRUBjkIRaki9g8N8fTzWq0K6-yvjGKq-R-Z0i5Vb42veWmA2McdWC-aCn5Ular1zdWqQ6EigOZms05UxjkkcJAMH1BWJrw1IaxbcaKym2jlWCu5Ag_iFWcobplnj-2HpcfA5wOopUp567ukqCBVuLddwyezAwLlg");'
+            ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          
+          <div class="layout-content-container flex flex-col w-80">
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Gestionar Categorías</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Nueva Categoría</p>
+                <input
+                  placeholder="Nombre de la categoría"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1172d4] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Añadir Categoría</span>
+              </button>
+            </div>
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Categorías Existentes</h3>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-14 justify-between">
+              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate">Electrónica</p>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="PencilSimple" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-14 justify-between">
+              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate">Ropa</p>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="PencilSimple" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-14 justify-between">
+              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate">Hogar</p>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="PencilSimple" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-14 justify-between">
+              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate">Alimentos</p>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="PencilSimple" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-14 justify-between">
+              <p class="text-[#111418] text-base font-normal leading-normal flex-1 truncate">Juguetes</p>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="PencilSimple" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Administrar Productos</p>
+            </div>
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#617589] flex border-none bg-[#f0f2f4] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Buscar productos por nombre, descripción o categoría..."
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-full placeholder:text-[#617589] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 px-4 py-3 text-left text-[#111418] w-14 text-sm font-medium leading-normal">Imagen</th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Nombre del Producto
+                      </th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Descripción
+                      </th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Categoría
+                      </th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal">
+                        Precio de Compra
+                      </th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal">
+                        Precio de Venta
+                      </th>
+                      <th class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">Stock</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9LDc_2AnGJVvMGyNvBC6T1v13XHKEk7dmxHFMQh-dvMzh9LzEcO7dMHLh6HRDdkYyXVFdXkY4Loah9I4aouptboFQiwIyuZfwihya71lIVF5KKMcBQR_9J8lHlNxeNqwOgwMosFyCeV8HZdQ5nSJebqnscPQPiAkMcFSRlJJJD_ZLo7my_GF2cmTwkeCF1Aa35XByXKMQTRx_No44Royggaxscc4XcPhhHPHbIut9UR2nA6ke5ORGlg7vfFEaIYa6gRDedELRqrVo");'
+                        ></div>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Producto A
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Descripción del Producto A
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Electrónica
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">500</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">750</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
+                        <div class="flex items-center gap-3">
+                          <div class="w-[88px] overflow-hidden rounded-sm bg-[#dbe0e6]"><div class="h-1 rounded-full bg-[#111418]" style="width: 56.8182%;"></div></div>
+                          <p class="text-[#111418] text-sm font-medium leading-normal">50</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl4CFgr-fVnRGWfE1ESYDFysziTDJ1ncKgm4r2Ywn56IEi6qb85KK3ueMWYCRNoecCavlozPO5PLE9xMYysdCW9rgxHOUHB8oo_kWApNTD2jT3Fd0VU3QQPbnd4EDjC195NKnvicWzac_0HYlXf5FFCrksGSFxr31NjV2pK74ERt3Yr2akXuYQtEkcmf5HjtzjKMuQKYm2hw1F6iwcmIcX8TQJuLkCTG-NrYxhL1Z4RpVV2TBYfSOq-STsG2ui4qLMEBkDsmTcc6uF");'
+                        ></div>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Producto B
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Descripción del Producto B
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">Ropa</td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">50</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">75</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
+                        <div class="flex items-center gap-3">
+                          <div class="w-[88px] overflow-hidden rounded-sm bg-[#dbe0e6]"><div class="h-1 rounded-full bg-[#111418]" style="width: 100%;"></div></div>
+                          <p class="text-[#111418] text-sm font-medium leading-normal">100</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzDVVX0COsNK2jTNyMf-WOVYKPzOaXAXEuYvGkCEeZksZY-WuawlyIr01mqYmlbTeEkf0s5toG5Tn6uaWfso1ezOEOfrA5aUote2J9cooQyKmIBnZQvMxlegJ6hm3oKtr3Rah085sKp6YbwNRRi0MVNDQwC7W4FhmrTSM-eI9cj_7TYGDb56ej31F_staSsRSt4ymIjW2Cu2-bkPQ1q13HRro8dx69G1GQ2-zwOiZhTMfl8jhitNOkYZL5cHfHaX9VXOiU0MY1y-wt");'
+                        ></div>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Producto C
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Descripción del Producto C
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">Hogar</td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">100</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">150</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
+                        <div class="flex items-center gap-3">
+                          <div class="w-[88px] overflow-hidden rounded-sm bg-[#dbe0e6]"><div class="h-1 rounded-full bg-[#111418]" style="width: 85.2273%;"></div></div>
+                          <p class="text-[#111418] text-sm font-medium leading-normal">75</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJLoTkBn5Ha_zt8C0gU34HjAd7YOR6h1abHBtecRuBDHM1D6-FSdIBdgkjgL-q_cSHd3X21TCFC-SDXgj82VrGAqB2qIHNGFSxLDtDIpLUE7Nsub4o_ceGw9dvdtXycIrf3-gC3jeHlKFYrG5Pq3ZwmxBzpibL0tEzIDkjcSMkhCoWW7CIJBRV70ij3MBT2kb3NviCWc_4pix_IuDzlkkq0OXzuASRBtPKKwHxRqymgFhP_aUr1pzVPRQlMU8KYosuns6V_cnix39S");'
+                        ></div>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Producto D
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Descripción del Producto D
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Alimentos
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">20</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">30</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
+                        <div class="flex items-center gap-3">
+                          <div class="w-[88px] overflow-hidden rounded-sm bg-[#dbe0e6]"><div class="h-1 rounded-full bg-[#111418]" style="width: 100%;"></div></div>
+                          <p class="text-[#111418] text-sm font-medium leading-normal">200</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuvsoGZXHQzQN4lipx-B7qgJ9hF8LNtFkdOqIWZoeVX6dEZ6oUl5Asnp6Y5j9bUwS7QMkw-k6o9IlYZDuYY5c3uMm7FaboNdcbXgcXFxQGAOZ6xu73w91hzes7NFSj7XzzwLDJ5ZuXDJ77U-555ZzY-zYU6d6KiYQt9vvHhJ5eyB1aOHocHYrBI0rYYyCPnZ8Q4L5jGUW_vxNvnShJ3a-p2A_5kDBsbRCoZqCZTYMtuor5uXUzfwuJxC010ALqVzHolPyaXbKCVomv");'
+                        ></div>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Producto E
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Descripción del Producto E
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">Juguetes</td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">30</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">45</span>
+                        </button>
+                      </td>
+                      <td class="table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776 h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
+                        <div class="flex items-center gap-3">
+                          <div class="w-[88px] overflow-hidden rounded-sm bg-[#dbe0e6]"><div class="h-1 rounded-full bg-[#111418]" style="width: 100%;"></div></div>
+                          <p class="text-[#111418] text-sm font-medium leading-normal">150</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                  @container(max-width:56px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-56{display: none;}}
+                  @container(max-width:176px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-176{display: none;}}
+                  @container(max-width:296px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-296{display: none;}}
+                  @container(max-width:416px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-416{display: none;}}
+                  @container(max-width:536px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-536{display: none;}}
+                  @container(max-width:656px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-656{display: none;}}
+                  @container(max-width:776px){.table-88c40975-eaab-47d8-a9d4-c9d1f50f1ce7-column-776{display: none;}}
+              </style>
+            </div>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-end">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Editar</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1172d4] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Eliminar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
