@@ -13,10 +13,10 @@
 
     <title>Login</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
+
     <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
@@ -55,12 +55,16 @@
           <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
             <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Iniciar Sesión</h2>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+
+              <div id="messageDisplay" class="text-center px-4 py-2 text-sm"></div>
+
               <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Nombre de Usuario</p>
+                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Correo Electrónico</p>
                 <input
-                  placeholder="Ingrese su nombre de usuario"
+                  id="usernameInput" placeholder="Ingrese su correo electrónico " type="email"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 placeholder:text-[#617589] p-4 text-base font-normal leading-normal"
                   value=""
+                  required
                 />
               </label>
             </div>
@@ -68,7 +72,7 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Contraseña</p>
                 <input
-                  placeholder="Ingrese su contraseña"
+                  id="passwordInput" placeholder="Ingrese su contraseña" type="password"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] focus:border-none h-14 placeholder:text-[#617589] p-4 text-base font-normal leading-normal"
                   value=""
                 />
@@ -76,7 +80,7 @@
             </div>
             <div class="flex px-4 py-3">
               <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#2b8dee] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                id="loginButton" type="submit" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#2b8dee] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Iniciar Sesión</span>
               </button>
@@ -90,3 +94,4 @@
     <Script src="Login.js"></Script>
   </body>
 </html>
+
